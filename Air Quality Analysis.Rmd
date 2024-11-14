@@ -1,0 +1,32 @@
+---
+title: "AIR QUALITY ANALYSIS"
+author: "CALVIN GACHERU MWANGI"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Air Quality Exploratory Analysis
+
+```{r}
+library(tidyverse)
+library(dplyr)
+library(psych)
+
+# load the Air Quality Dataset
+airquality <- read.csv("Air Quality Dataset.csv")
+head(airquality,10)
+```
+
+**Code explanation**
+
+The code above loads the needed libraries that will be used if this analysis. It then proceeds to load the Air quality dataset csv file and then displaying the first 10 observations.
+
+**Output Explanation**
+
+The output is a table showing the first 10 observation in the Air Quality data set. The table is comprised of 4 observations: Date, Country, Status, and AQI.Value. The data set is made up of 14938 observations from different countries collected over a period of 3 years.
+
+Since the data is large, we will focus of data collected for African countries in the 3 years and determine which country has the best air quality and the worst air quality.
